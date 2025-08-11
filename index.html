@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Journal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pomodoro Journal</h1>
+        <div class="timer">
+            <span id="minutes">25</span>:<span id="seconds">00</span>
+        </div>
+        <div class="settings">
+            <div>
+                <label for="work-duration">Work (min):</label>
+                <input type="number" id="work-duration" value="25" min="1">
+            </div>
+            <div>
+                <label for="break-duration">Break (min):</label>
+                <input type="number" id="break-duration" value="5" min="1">
+            </div>
+        </div>
+        <div class="controls">
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
+            <button id="reset">Reset</button>
+        </div>
+        <div class="journal" style="display: none;">
+            <h2>Break Time Journal</h2>
+            <textarea id="journal-entry" placeholder="How was your focus session?"></textarea>
+            <button id="save-entry">Save Entry</button>
+        </div>
+        <div class="entries">
+            <h2>Journal Entries</h2>
+            <ul id="entries-list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
