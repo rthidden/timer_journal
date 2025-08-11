@@ -8,6 +8,7 @@ const journalDiv = document.querySelector('.journal');
 let timer;
 let isRunning = false;
 let isWorkTime = true;
+
 const workDurationInput = document.getElementById('work-duration');
 const breakDurationInput = document.getElementById('break-duration');
 
@@ -60,9 +61,6 @@ function stopTimer() {
 function resetTimer() {
     stopTimer();
     isWorkTime = true;
-    workMinutes = parseInt(workDurationInput.value);
-    workMinutes = parseInt(workDurationInput.value, 10);
-    breakMinutes = parseInt(breakDurationInput.value, 10);
     currentTime = workMinutes * 60;
     journalDiv.style.display = 'none';
     updateTimerDisplay();
