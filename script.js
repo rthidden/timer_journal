@@ -66,7 +66,7 @@ function resetTimer() {
 
 workDurationInput.addEventListener('change', () => {
     if (!isRunning) {
-        workMinutes = parseInt(workDurationInput.value);
+        workMinutes = parseInt(workDurationInput.value, 10);
         if (isWorkTime) {
             currentTime = workMinutes * 60;
             updateTimerDisplay();
