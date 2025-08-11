@@ -12,7 +12,8 @@ const workDurationInput = document.getElementById('work-duration');
 const breakDurationInput = document.getElementById('break-duration');
 
 let workMinutes = parseInt(workDurationInput.value);
-let breakMinutes = parseInt(breakDurationInput.value);
+let workMinutes = parseInt(workDurationInput.value, 10);
+let breakMinutes = parseInt(breakDurationInput.value, 10);
 let currentTime = workMinutes * 60;
 
 function updateTimerDisplay() {
