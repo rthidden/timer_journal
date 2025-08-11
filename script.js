@@ -8,8 +8,13 @@ const journalDiv = document.querySelector('.journal');
 let timer;
 let isRunning = false;
 let isWorkTime = true;
-let workMinutes = 25;
-let breakMinutes = 5;
+
+const workDurationInput = document.getElementById('work-duration');
+const breakDurationInput = document.getElementById('break-duration');
+
+let workMinutes = parseInt(workDurationInput.value);
+let workMinutes = parseInt(workDurationInput.value, 10);
+let breakMinutes = parseInt(breakDurationInput.value, 10);
 let currentTime = workMinutes * 60;
 
 function updateTimerDisplay() {
@@ -34,7 +39,11 @@ function startTimer() {
                 currentTime = workMinutes * 60;
                 journalDiv.style.display = 'none';
             } else {
-                alert('Work session is over! Time for a break.');
+                showNotification('Break is over! Time to focus.');
+                currentTime = workMinutes * 60;
+                journalDiv.style.display = 'none';
+            } else {
+                showNotification('Work session is over! Time for a break.');
                 currentTime = breakMinutes * 60;
                 journalDiv.style.display = 'block';
             }
@@ -56,6 +65,26 @@ function resetTimer() {
     journalDiv.style.display = 'none';
     updateTimerDisplay();
 }
+
+workDurationInput.addEventListener('change', () => {
+    if (!isRunning) {
+        workMinutes = parseInt(workDurationInput.value, 10);
+        if (isWorkTime) {
+            currentTime = workMinutes * 60;
+            updateTimerDisplay();
+        }
+    }
+});
+
+breakDurationInput.addEventListener('change', () => {
+    if (!isRunning) {
+        breakMinutes = parseInt(breakDurationInput.value, 10);
+        if (!isWorkTime) {
+            currentTime = breakMinutes * 60;
+            updateTimerDisplay();
+        }
+    }
+});
 
 const saveEntryBtn = document.getElementById('save-entry');
 const journalEntryTextarea = document.getElementById('journal-entry');

@@ -47,6 +47,25 @@ h1 {
     background-color: #555;
 }
 
+.settings {
+    margin-bottom: 20px;
+}
+
+.settings div {
+    margin-bottom: 10px;
+}
+
+.settings label {
+    margin-right: 10px;
+}
+
+.settings input {
+    width: 50px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
 .journal {
     margin-top: 20px;
 }
