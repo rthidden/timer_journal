@@ -38,7 +38,11 @@ function startTimer() {
                 currentTime = workMinutes * 60;
                 journalDiv.style.display = 'none';
             } else {
-                alert('Work session is over! Time for a break.');
+                showNotification('Break is over! Time to focus.');
+                currentTime = workMinutes * 60;
+                journalDiv.style.display = 'none';
+            } else {
+                showNotification('Work session is over! Time for a break.');
                 currentTime = breakMinutes * 60;
                 journalDiv.style.display = 'block';
             }
