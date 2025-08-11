@@ -57,7 +57,8 @@ function resetTimer() {
     stopTimer();
     isWorkTime = true;
     workMinutes = parseInt(workDurationInput.value);
-    breakMinutes = parseInt(breakDurationInput.value);
+    workMinutes = parseInt(workDurationInput.value, 10);
+    breakMinutes = parseInt(breakDurationInput.value, 10);
     currentTime = workMinutes * 60;
     journalDiv.style.display = 'none';
     updateTimerDisplay();
