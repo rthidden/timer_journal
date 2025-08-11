@@ -76,7 +76,7 @@ workDurationInput.addEventListener('change', () => {
 
 breakDurationInput.addEventListener('change', () => {
     if (!isRunning) {
-        breakMinutes = parseInt(breakDurationInput.value);
+        breakMinutes = parseInt(breakDurationInput.value, 10);
         if (!isWorkTime) {
             currentTime = breakMinutes * 60;
             updateTimerDisplay();
