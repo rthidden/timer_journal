@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.timer {
+    font-size: 48px;
+    margin: 20px 0;
+}
+
+.controls button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.controls button#stop {
+    background-color: #f44336;
+}
+
+.controls button#reset {
+    background-color: #555;
+}
+
+.journal {
+    margin-top: 20px;
+}
+
+.journal textarea {
+    width: 80%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.journal button {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.entries {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.entries ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.entries li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
